@@ -1,6 +1,7 @@
 import argparse
 from generator import Generator
 from sorter import Sorter
+import time
 
 
 def main():
@@ -24,7 +25,10 @@ def main():
     if args.method == "generate":
         Generator(num_rows=args.num_rows, max_len=args.max_len, output_file=args.output_file).generate()
     elif args.method == "sort":
+
+        start_time = time.time()
         Sorter(input_file=args.input_file, output_file=args.output_file, memory=args.memory).sort()
+        print("--- %s seconds ---" % (time.time() - start_time))
 
 
 if __name__ == '__main__':
