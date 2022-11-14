@@ -4,7 +4,7 @@ import shutil
 
 class TempFileStorage:
     """
-    TempFileStorage - class, that stores temp files during extrnal sort algo
+    TempFileStorage - class, that stores temp files during external sort algo
     temp files are always sorted lexicographically during algo
     """
 
